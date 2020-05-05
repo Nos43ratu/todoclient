@@ -1,5 +1,5 @@
 import axios from "axios";
-const apiURI = "http://localhost:5000";
+const apiURI = "https://cryptic-beach-01154.herokuapp.com";
 export const getTodos = () => {
   return async (dispatch) => {
     await axios
@@ -27,7 +27,7 @@ export const patchColumn = (order, order2) => {
 export const patchColumns = ({ sourceColumn, destColumn }) => {
   return async (dispatch) => {
     await axios
-      .patch("http://localhost:5000/collums", {
+      .patch("https://cryptic-beach-01154.herokuapp.com/collums", {
         sourceColumn,
         destColumn,
       })
@@ -40,7 +40,7 @@ export const patchColumns = ({ sourceColumn, destColumn }) => {
 export const changeColumns = (column) => {
   return async (dispatch) => {
     await axios
-      .put("http://localhost:5000/collums", column)
+      .put("https://cryptic-beach-01154.herokuapp.com/collums", column)
       .then(() => {
         dispatch(getTodos());
       })

@@ -103,7 +103,7 @@ class Todo extends React.Component {
         <Pane
           display="flex"
           margin={"1em"}
-          height={"70vh"}
+          minHeight={"70vh"}
           width={"100%-2em"}
           overflow={"auto"}
         >

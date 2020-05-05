@@ -115,6 +115,9 @@ class Menu extends Component {
                   task: { color: "#FFFFFF", status: false },
                 });
               }}
+              disabled={
+                this.state.task.owner === "" || this.state.task.owner === null
+              }
             >
               Submit
             </Button>
